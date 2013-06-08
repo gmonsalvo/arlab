@@ -1,0 +1,24 @@
+#calendar th, #calendar td{
+    text-align: center;
+
+
+}
+
+#calendar .weekdays-row th {
+    background-color: #fff;
+}
+
+#calendar .calendar-selected-day {
+    font-weight: bold;
+    background-color: #e3ca6d;
+     border: 1px solid #e3ca6d;
+     border-collapse:collapse;
+}
+
+#calendar .calendar-no-selected-day {
+     background-color: #f6e7af;
+      border: 1px solid #e3ca6d;
+      border-collapse:collapse;
+}
+
+

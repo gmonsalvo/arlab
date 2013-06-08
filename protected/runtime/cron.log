@@ -1,0 +1,66 @@
+2013/04/18 14:31:20 [error] [php] include(YiiMailer.php): failed to open stream: No such file or directory (C:\wamp\www\yii_old\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\wamp\www\arlab\protected\commands\CronMailCommand.php(14): spl_autoload_call()
+#1 C:\wamp\www\yii_old\framework\console\CConsoleCommandRunner.php(63): CronMailCommand->run()
+#2 C:\wamp\www\yii_old\framework\console\CConsoleApplication.php(88): CConsoleCommandRunner->run()
+#3 C:\wamp\www\yii_old\framework\base\CApplication.php(158): CConsoleApplication->processRequest()
+#4 C:\wamp\www\arlab\cron.php(11): CConsoleApplication->run()
+
+2013/04/18 14:39:07 [error] [php] require(C:\wamp\www\arlab\protected\config\mail.php): failed to open stream: No such file or directory (C:\wamp\www\arlab\protected\extensions\YiiMailer\YiiMailer.php:66)
+Stack trace:
+#0 C:\wamp\www\yii_old\framework\console\CConsoleCommandRunner.php(63): CronMailCommand->run()
+#1 C:\wamp\www\yii_old\framework\console\CConsoleApplication.php(88): CConsoleCommandRunner->run()
+#2 C:\wamp\www\yii_old\framework\base\CApplication.php(158): CConsoleApplication->processRequest()
+#3 C:\wamp\www\arlab\cron.php(11): CConsoleApplication->run()
+
+2013/04/18 14:41:05 [error] [php] mail(): Failed to connect to mailserver at "localhost" port 25, verify your "SMTP" and "smtp_port" setting in php.ini or use ini_set() (C:\wamp\www\arlab\protected\commands\CronMailCommand.php:14)
+Stack trace:
+#0 C:\wamp\www\yii_old\framework\console\CConsoleApplication.php(88): CConsoleCommandRunner->run()
+#1 C:\wamp\www\yii_old\framework\base\CApplication.php(158): CConsoleApplication->processRequest()
+#2 C:\wamp\www\arlab\cron.php(11): CConsoleApplication->run()
+
+2013/04/19 14:31:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection.connectionString cannot be empty.' in C:\wamp\www\yii_old\framework\db\CDbConnection.php:352
+Stack trace:
+#0 C:\wamp\www\yii_old\framework\db\CDbConnection.php(313): CDbConnection->open()
+#1 C:\wamp\www\yii_old\framework\db\CDbConnection.php(291): CDbConnection->setActive(true)
+#2 C:\wamp\www\yii_old\framework\base\CModule.php(372): CDbConnection->init()
+#3 C:\wamp\www\yii_old\framework\base\CApplication.php(429): CModule->getComponent('db')
+#4 C:\wamp\www\yii_old\framework\db\ar\CActiveRecord.php(609): CApplication->getDb()
+#5 C:\wamp\www\yii_old\framework\db\ar\CActiveRecord.php(2275): CActiveRecord->getDbConnection()
+#6 C:\wamp\www\yii_old\framework\db\ar\CActiveRecord.php(372): CActiveRecordMetaData->__construct(Object(Clientes))
+#7 C:\wamp\www\arlab\protected\models\Clientes.php(39): CActiveRecord::model('Clientes')
+#8 C:\wamp\www\arlab\protected\commands\CronMailCommand.php(12): Clientes::model()
+#9 C:\wamp\www\yii_old\framework\console\CConsoleCommandRunner.php(63): CronMailCommand->run(Array)
+#10 C:\wamp\www\yii_old\framework\console\CConsoleApplication.php(88): CConsoleCommandRunner->run(Array)
+#11 C:\wamp\www\yii_old\framework\base\CApplication.php(158): CConsoleApplication->processRequest()
+#12 C:\wamp\www\arlab\cron.php(11): CApplication->run()
+#13 {main}
+2013/04/19 14:36:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2013] Lost connection to MySQL server at 'reading initial communication packet', system error: 0' in C:\wamp\www\yii_old\framework\db\CDbConnection.php:364
+Stack trace:
+#0 C:\wamp\www\yii_old\framework\db\CDbConnection.php(313): CDbConnection->open()
+#1 C:\wamp\www\yii_old\framework\db\CDbConnection.php(291): CDbConnection->setActive(true)
+#2 C:\wamp\www\yii_old\framework\base\CModule.php(372): CDbConnection->init()
+#3 C:\wamp\www\yii_old\framework\base\CApplication.php(429): CModule->getComponent('db')
+#4 C:\wamp\www\yii_old\framework\db\ar\CActiveRecord.php(609): CApplication->getDb()
+#5 C:\wamp\www\yii_old\framework\db\ar\CActiveRecord.php(2275): CActiveRecord->getDbConnection()
+#6 C:\wamp\www\yii_old\framework\db\ar\CActiveRecord.php(372): CActiveRecordMetaData->__construct(Object(Clientes))
+#7 C:\wamp\www\arlab\protected\models\Clientes.php(39): CActiveRecord::model('Clientes')
+#8 C:\wamp\www\arlab\protected\commands\CronMailCommand.php(12): Clientes::model()
+#9 C:\wamp\www\yii_old\framework\console\CConsoleCommandRunner.php(63): CronMailCommand->run(Array)
+#10 C:\wamp\www\yii_old\framework\console\CConsoleApplication.php(88): CConsoleCommandRunner->run(Array)
+#11 C:\wamp\www\yii_old\framework\base\CApplication.php(158): CConsoleApplication->processRequest()
+#12 C:\wamp\www\arlab\cron.php(11): CApplication->run()
+#13 {main}
+2013/04/22 22:47:45 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') 0 (estado=)) AND (fechaVencimiento<='2013-04-22')' at line 1. The SQL statement executed was: SELECT * FROM `notaVenta` `t` WHERE ((servicioId=) 0 (estado=)) AND (fechaVencimiento<='2013-04-22').
+2013/04/22 22:47:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') 0 (estado=)) AND (fechaVencimiento<='2013-04-22')' at line 1. The SQL statement executed was: SELECT * FROM `notaVenta` `t` WHERE ((servicioId=) 0 (estado=)) AND (fechaVencimiento<='2013-04-22')' in C:\wamp\www\yii_old\framework\db\CDbCommand.php:516
+Stack trace:
+#0 C:\wamp\www\yii_old\framework\db\CDbCommand.php(374): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii_old\framework\db\ar\CActiveRecord.php(1290): CDbCommand->queryAll()
+#2 C:\wamp\www\yii_old\framework\db\ar\CActiveRecord.php(1410): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\arlab\protected\models\ServiciosInternet.php(171): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\wamp\www\arlab\protected\commands\CronMailCommand.php(21): ServiciosInternet->getPeriodosImpagos()
+#5 C:\wamp\www\yii_old\framework\console\CConsoleCommandRunner.php(63): CronMailCommand->run(Array)
+#6 C:\wamp\www\yii_old\framework\console\CConsoleApplication.php(88): CConsoleCommandRunner->run(Array)
+#7 C:\wamp\www\yii_old\framework\base\CApplication.php(158): CConsoleApplication->processRequest()
+#8 C:\wamp\www\arlab\cron.php(11): CApplication->run()
+#9 {main}
